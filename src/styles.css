@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #93c9f5;
+  color: #5ba9e9;
 }
 
 .weather-app {
@@ -24,7 +24,7 @@ header {
 .search-input {
   background-color: #eff7ff;
   border: none;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(43, 51, 83, 0.658);
   font-size: 16px;
   padding: 20px;
   width: 75%;

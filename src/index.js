@@ -1,9 +1,16 @@
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
-  let temperature = Math.round(response.data.temperature.current);
+  let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#current-city");
+  let descriptionElement = document.querySelector("#description");
+  let humidtyElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
+
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = temperature;
+  humidtyElement.innerHTML = `${response.data.temperature.humidity}%`;
+  descriptionElement.innerHTML = response.data.condition.description;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  temperatureElement.innerHTML = Math.round(temperature);
 }
 
 function search(event) {
@@ -51,3 +58,5 @@ let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+
+searchCity("Belgium");
